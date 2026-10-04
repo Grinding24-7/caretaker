@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="color-scheme" content="light" />
+    <meta name="description" content="Medicine reminder dashboard with dose tracking and adherence reporting." />
+    <title>Caretaker — Medicine Reminder</title>
+    <link rel="manifest" href="/manifest.json" />
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <!-- ============ LOGIN ============ -->
+    <div id="view-login" class="login-wrap">
+      <form id="login-form" class="login-card" autocomplete="on" novalidate>
+        <div class="brand">
+          <div class="brand-mark" aria-hidden="true">C</div>
+          <h1>Caretaker</h1>
+        </div>
+        <p class="sub">Track every dose. Catch every miss.</p>
+
+        <div id="login-error" class="error-box" hidden></div>
+
+        <div class="field">
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" autocomplete="username" required />
+        </div>
+
+        <div class="field">
+          <label for="password">Password</label>
+          <input id="password" name="password" type="password" autocomplete="current-password" required />
+        </div>
+
+        <button class="btn btn-block" type="submit" id="login-btn">Sign in</button>
+
+        <div class="demo-accounts">
+          <p>Demo accounts — click to fill</p>
+          <div class="chip-row">
+            <button type="button" class="chip" data-demo="ada@example.com">ada@example.com</button>
+            <button type="button" class="chip" data-demo="ben@example.com">ben@example.com</button>
+            <button type="button" class="chip" data-demo="dr.mira@example.com">dr.mira@example.com</button>
+            <button type="button" class="chip" data-demo="dr.finn@example.com">dr.finn@example.com</button>
+          </div>
+          <p class="demo-pw">Password for all: <code>password123</code></p>
+        </div>
+      </form>
+    </div>
+
+    <!-- ============ DASHBOARD ============ -->
+    <div id="view-app" hidden>
+      <header class="topbar">
+        <div class="topbar-inner">
+          <div class="brand">
+            <div class="brand-mark" aria-hidden="true">C</div>
+            <h1 class="topbar-title">Caretaker</h1>
+          </div>
+          <div class="spacer"></div>
+          <div class="who">
+            <div class="name" id="who-name"></div>
+            <div class="role" id="who-role"></div>
+          </div>
+          <button class="btn btn-ghost btn-sm" id="logout-btn" type="button">Sign out</button>
+        </div>
+      </header>
+
+      <main id="main"></main>
+    </div>
+
+    <div class="toast-stack" id="toasts" aria-live="polite"></div>
+
+    <script src="/app.js"></script>
+  </body>
+</html>

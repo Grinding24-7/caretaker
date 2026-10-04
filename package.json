@@ -1,0 +1,23 @@
+{
+  "name": "caretaker",
+  "version": "1.0.0",
+  "description": "Medicine reminder dashboard with adherence tracking and doctor access to missed doses",
+  "type": "commonjs",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js",
+    "seed": "node -e \"require('./src/db').seed();\"",
+    "reset": "node -e \"require('./src/db').reset();\"",
+    "test": "node --test"
+  },
+  "dependencies": {
+    "bcryptjs": "^3.0.2",
+    "cookie-parser": "^1.4.7",
+    "express": "^5.2.1",
+    "express-session": "^1.18.1"
+  },
+  "engines": {
+    "node": ">=24"
+  }
+}

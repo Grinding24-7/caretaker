@@ -1,0 +1,18 @@
+{
+  "name": "Caretaker — Medicine Reminder",
+  "short_name": "Caretaker",
+  "description": "Track medicines, timings and missed doses in one dashboard.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#f4f6fb",
+  "theme_color": "#4f6ef7",
+  "icons": [
+    {
+      "src": "/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
